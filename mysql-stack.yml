@@ -1,0 +1,14 @@
+# Use root/example as user/password credentials
+# Run docker stack deploy -c mysql-stack.yml mysql
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - /opt/mysql:/var/lib/mysql
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
