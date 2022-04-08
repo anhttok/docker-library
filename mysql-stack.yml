@@ -11,5 +11,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
-      - /opt/mysql:/var/lib/mysql
+      - ./database-data/mysql:/var/lib/mysql
     command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
