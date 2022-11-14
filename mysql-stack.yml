@@ -12,4 +12,4 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
       - ./database-data/mysql:/var/lib/mysql
-    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci', '--sql_mode=']
